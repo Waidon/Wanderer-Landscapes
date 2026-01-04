@@ -15,7 +15,7 @@ body {
 .hero {
   position: relative;
   min-height: 100vh;
-  background: url("./Images/Blue\ Water\ Image.jpg") center / cover no-repeat;
+  background: url("./Images/Boat\ Image.jpg") center / cover no-repeat;
   display: flex;
   align-items: center;
   padding: 2rem;
