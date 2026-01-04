@@ -1,0 +1,517 @@
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #ffffff;
+  color: #081c15;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: url("./Images/Blue\ Water\ Image.jpg") center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  
+}
+
+/* Brand name */
+.hero-brand {
+  display: block;
+  font-size: 2.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+
+/* Dark gradient overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
+  pointer-events: none;
+}
+
+/* Content container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 640px;
+  color: #d8f3dc;
+}
+
+/* Small category tag */
+.hero-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-style: bold;
+}
+
+/* Main heading */
+.hero h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.4rem, 6vw, 2rem);
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+/* Description */
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
+  color: #e5e5e5;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* CTA buttons */
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+}
+
+.btn {
+  padding: 0.85rem 1.75rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Primary CTA */
+.hero-btn.primary {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 20px;
+  padding-top: 10px;
+  padding: 10px;
+  padding-top: 12px;
+  text-decoration: none;
+  font-size: 0.9rem ;
+}
+
+.hero-btn.primary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #081c15;
+}
+
+/* Secondary CTA */
+.btn.secondary {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.9rem ;
+  
+}
+
+.btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #081c15;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .hero {
+    padding: 4rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  .hero-content {
+    max-width: 720px;
+  }
+}
+
+/* Gallery Section */
+.gallery-section {
+  padding: 4rem 1.5rem;
+  background: #ffffff;
+}
+
+/* Header */
+.gallery-header {
+  max-width: 700px;
+  margin-bottom: 3rem;
+}
+
+.gallery-header h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin-bottom: 0.75rem;
+  color: #081c15;
+}
+
+.gallery-header p {
+  color: #74c69d;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Grid Layout */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Individual item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  aspect-ratio: 3 / 4;
+  cursor: pointer;
+}
+
+/* Image */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Overlay caption */
+.gallery-item figcaption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0)
+  );
+  color: white;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover effects */
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-item:hover figcaption {
+  opacity: 1;
+}
+
+/* Touch devices — always show title */
+@media (hover: none) {
+  .gallery-item figcaption {
+    opacity: 1;
+  }
+}
+
+/* Larger screens */
+@media (min-width: 1024px) {
+  .gallery-section {
+    padding: 6rem 4rem;
+  }
+}
+
+
+
+/* Gallery Page Specific Styles */
+/* Header */
+.gallery-header {
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 1.85rem;
+}
+
+/* Intro */
+.gallery-intro {
+  max-width: 700px;
+  padding: 4rem 1.5rem 2rem;
+}
+
+.gallery-intro h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  color: #081c15;
+}
+
+.gallery-intro p {
+  color: #74c69d;
+  line-height: 1.7;
+}
+
+/* Grid */
+.gallery-grid {
+  padding: 2rem 1.5rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Items */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  aspect-ratio: 3 / 4;
+  text-decoration: none;
+  color: white;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+/* Caption overlay */
+.gallery-caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.25rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0)
+  );
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover */
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
+
+/* Mobile: always show caption */
+@media (hover: none) {
+  .gallery-caption {
+    opacity: 1;
+  }
+}
+
+/* Shopping Page Specific Styles */
+
+/* Header */
+.shop-header {
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+
+/* Intro */
+.shop-intro {
+  max-width: 720px;
+  padding: 4rem 1.5rem 2rem;
+}
+
+.shop-intro h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  color:#081c15;
+}
+
+.shop-intro p {
+  color: #74c69d;
+  line-height: 1.7;
+}
+
+/* Product Grid */
+.product-grid {
+  padding: 2rem 1.5rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* Product Card */
+.product-card {
+  border-radius: 22px;
+  overflow: hidden;
+  background: #fafafa;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+/* Product Info */
+.product-info {
+  padding: 1.5rem;
+  color: #95d5b2;
+}
+
+.product-info h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 0.9rem;
+  color: #081c15;
+  margin-bottom: 1.25rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background: black;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #222;
+}
+
+/* Info */
+.shop-info {
+  padding: 3rem 1.5rem;
+  background: #74c69d;
+  color: #081c15;
+}
+
+.shop-info ul {
+  max-width: 800px;
+  margin: auto;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.shop-info li {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Footer */
+.site-footer {
+  background: #0f0f0f;
+  color: #ffffff;
+  padding: 3rem 1.5rem 2rem;
+}
+
+/* Top content */
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+
+/* Brand */
+.footer-brand strong {
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.footer-brand p {
+  font-size: 0.85rem;
+  color: #74c69d;
+  margin-top: 0.5rem;
+}
+
+/* Social icons */
+.footer-socials {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.footer-socials a {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+  background: white;
+  color: black;
+}
+
+/* Bottom text */
+.footer-bottom {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  font-size: 0.8rem;
+  color: #b5b5b5;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
