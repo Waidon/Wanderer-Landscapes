@@ -25,7 +25,7 @@ body {
 /* Brand name */
 .hero-brand {
   display: block;
-  font-size: 2.85rem;
+  
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #ffffff;
@@ -130,14 +130,35 @@ body {
 @media (min-width: 768px) {
   .hero {
     padding: 4rem;
+  
+}
+
+.hero-brand {
+  font-size: 2.5rem; /* default size for desktops */
+  font-weight: bold;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .hero-brand {
+    font-size: 2rem;
   }
 }
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .hero-brand {
+    font-size: 2rem;
+  }
+}
+
 
 /* Desktop */
 @media (min-width: 1200px) {
   .hero-content {
     max-width: 720px;
   }
+  
 }
 
 /* Gallery Section */
@@ -326,6 +347,7 @@ body {
   .gallery-caption {
     opacity: 1;
   }
+  
 }
 
 /* Shopping Page Specific Styles */
@@ -515,3 +537,4 @@ body {
     text-align: left;
   }
 }
+
